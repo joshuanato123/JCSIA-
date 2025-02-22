@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Banner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .moving-banner {
+            width: 100%;
+            background: linear-gradient(to right, #0066ff, #00ccff);
+            color: white;
+            padding: 10px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+        }
+        .moving-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: moveBanner 10s linear infinite;
+        }
+        @keyframes moveBanner {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="moving-banner">
+        <div class="moving-text">Welcome to Our Website | Latest Updates | Stay Connected</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
